@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+
+
+
+
+*{
+    margin:0;
+    padding: 0;
+    color:white;
+}
+body{
+  /* background: black; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appp{
+  
+  height: 100vh;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  font-family: "Merriweather Sans", sans-serif;
+  /* color: white; */
+  transition-duration: 1s;
+  overflow: hidden;
+  
+} 
+.date{
+  margin-top: .4rem;
+  margin-bottom: .4rem;;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+input{
+   
+    width: 50%;
+     color:black;
+    border: none;
+    padding: 12px;
+    height: 10px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 18px;
+     
+}
+.country{
+  font-size: 1.25rem;
+
+}
+.search{
+    
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+}
+
+  
+  .container{
+      display: flex;
+      justify-content: center;
+    align-items: center;
+    flex-direction: column;
+      margin-top: 2rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .cityName{
+    
+      font-weight: 400;
+      font-size: 2.25rem;
+      text-transform: uppercase;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .temp{
+            margin-top: 2.5rem;
+            font-size: 3.8rem;
+            margin-bottom: 2.5rem;
   }
-}
+  .date{
+    margin-top: .4rem;
+    margin-bottom: .4rem;;
+  }
+  .desc{
+        margin-bottom:6rem;
+        font-size: 1.5rem;
+  }
+  
+  
+  .two-columns{
+    display: flex;
+   justify-content: space-around;
+   align-items: center;
+    width:90%;
+    
+  }
+  
+ 
+.two-info {
+        text-align: left;
+        font-weight: 600;
+        text-transform: capitalize;
+        
+        font-size: 1.75rem;
+} 
