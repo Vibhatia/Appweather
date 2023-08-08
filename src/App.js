@@ -41,24 +41,24 @@ function App() {
   return (
 
 <>
-{/* <div className="appp" style={ 
+<div className="appp" style={ 
         (data?.weather?data.weather[0].main:null)==="Mist"? {backgroundImage: `url(${Mist})` } 
-                                     :  (data.weather?data.weather[0].main:null)?.includes("Cloud")
+                                     :  (data?.weather?data.weather[0].main:null)?.includes("Cloud")
                                      ? { backgroundImage: `url(${Cloudy})` }
-                                     :  (data.weather?data.weather[0].main:null)?.includes("Clear")
+                                     :  (data?.weather?data.weather[0].main:null)?.includes("Clear")
                                      ? { backgroundImage: `url(${Clear})` }
-                                     :  (data.weather?data.weather[0].main:null)?.includes("Rain")
+                                     :  (data?.weather?data.weather[0].main:null)?.includes("Rain")
                                      ? { backgroundImage: `url(${Rain})` }
-                                     :  (data.weather?data.weather[0].main:null)?.includes("Snow")
+                                     :  (data?.weather?data.weather[0].main:null)?.includes("Snow")
                                      ? { backgroundImage: `url(${Snow})` }
-                                     :  (data.weather?data.weather[0].main:null)?.includes("Sunny")
+                                     :  (data?.weather?data.weather[0].main:null)?.includes("Sunny")
                                      ? { backgroundImage: `url(${Sunny})` }
-                                     :  (data.weather?data.weather[0].main:null)?.includes("Fog")
+                                     :  (data?.weather?data.weather[0].main:null)?.includes("Fog")
                                      ? { backgroundImage: `url(${Fog})` }
                                      : { backgroundImage: `url(${Overcast})` }
                                      
 
-     }>    */}
+     }>   
 
 
      
@@ -98,7 +98,7 @@ function App() {
 
       </div>
       </div>
-       {/* </div>  */}
+       </div> 
     </>
   );
 }
