@@ -17,12 +17,10 @@ function App() {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&imperial&appid=895284fb2d2c50a520ea537456963d9c`
 
-  const searchLocation = (e) => {
+  const searchLocation = async(e) => {
     if (e.key === 'Enter') {
-      axios.get(url).then((response) => {
-        setData(response.data)
-        console.log(response.data)
-      })
+      const res = await axios.get(url);
+      setData(res.data);
       setLocation('')
       
     }
@@ -43,8 +41,8 @@ function App() {
   return (
 
 <>
-<div className="appp" style={ 
-        (data.weather?data.weather[0].main:null)==="Mist"? {backgroundImage: `url(${Mist})` } 
+{/* <div className="appp" style={ 
+        (data?.weather?data.weather[0].main:null)==="Mist"? {backgroundImage: `url(${Mist})` } 
                                      :  (data.weather?data.weather[0].main:null)?.includes("Cloud")
                                      ? { backgroundImage: `url(${Cloudy})` }
                                      :  (data.weather?data.weather[0].main:null)?.includes("Clear")
@@ -60,7 +58,7 @@ function App() {
                                      : { backgroundImage: `url(${Overcast})` }
                                      
 
-     }>   
+     }>    */}
 
 
      
@@ -79,7 +77,7 @@ function App() {
       <div className="cityName">{data.name}</div>
       <div className="country">{data.sys?data.sys.country:null}</div>
       <div className="date">{days[day]}, {months[month]} {num}, {year}</div>
-      <div className="temp">{data.main?data.main.temp: null}°C</div>
+      <div className="temp">{data.main?data.main.temp: null}</div>
      
       <div className="desc">{data.weather?<p>{data.weather[0].main}</p>: null}</div>
       <div className="two-columns">
@@ -100,7 +98,7 @@ function App() {
 
       </div>
       </div>
-       </div> 
+       {/* </div>  */}
     </>
   );
 }
